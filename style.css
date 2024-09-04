@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
+/* Variáveis CSS para facilitar a manutenção do tema */
 :root {
     --primary-color: #2887ff;
     --primary-color-dark: #2476da;
@@ -10,18 +9,21 @@
     --max-width: 1200px;
 }
 
+/* Reset de padding, margin e box-sizing para consistência entre navegadores */
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* Container padrão para seções, centralizado com padding */
 .section_container {
     max-width: var(--max-width);
     margin: auto;
     padding: 5rem 1rem;
 }
 
+/* Estilo do cabeçalho das seções */
 .section_header {
     margin-bottom: 5px;
     font-size: 2.5rem;
@@ -30,6 +32,7 @@
     text-align: center;
 }
 
+/* Estilo da descrição das seções */
 .section_Description {
     max-width: 600px;
     margin-inline: auto;
@@ -37,8 +40,9 @@
     text-align: center;
 }
 
+/* Botões principais com estilo e transição */
 .btn {
-    padding: .75rem 1.5rem;
+    padding: 0.75rem 1.5rem;
     outline: none;
     border: none;
     font-size: 1rem;
@@ -54,36 +58,41 @@
     background-color: var(--primary-color-dark);
 }
 
+/* Estilo do logotipo */
 .logo {
     font-size: 1.75rem;
     font-weight: 800;
     color: var(--text-dark);
 }
 
+/* Estilo para imagens dentro do site */
 img {
     display: flex;
     width: 100%;
-
 }
 
+/* Estilo para links, com transição suave */
 a {
     text-decoration: none;
     transition: 0.3s;
 }
 
+/* Remove a lista padrão para elementos ul */
 ul {
     list-style: none;
 }
 
-html,
-body {
+/* Suavização do scroll */
+html, body {
     scroll-behavior: smooth;
 }
 
+/* Fonte padrão do corpo */
 body {
     font-family: "DM Sans", sans-serif;
 }
 
+/* Estilo do nav fixo no topo */
 nav {
     position: fixed;
     isolation: isolate;
@@ -92,6 +101,7 @@ nav {
     z-index: 9;
 }
 
+/* Cabeçalho do nav com logo e botão de menu */
 .nav_header {
     padding: 1rem;
     width: 100%;
@@ -101,20 +111,23 @@ nav {
     background-color: var(--primary-color);
 }
 
+/* Estilo do logo no nav */
 .nav_logo .logo {
     font-size: 1.5rem;
     color: var(--white);
 }
 
+/* Botão do menu com ícone */
 .nav_menu_btn {
     font-size: 1.5rem;
     color: var(--white);
     cursor: pointer;
 }
 
+/* Estilo dos links do menu, começa escondido fora da tela */
 .nav_links {
     position: absolute;
-    bottom: 0;
+    top: 100%; /* Começa abaixo da barra de navegação */
     left: 0;
     width: 100%;
     padding: 2rem;
@@ -124,31 +137,35 @@ nav {
     flex-direction: column;
     gap: 2rem;
     background-color: var(--primary-color);
-    transform: translateY(100%); /* Começa fora da tela */
+    transform: translateY(-100%); /* Esconde o menu acima da viewport */
     transition: transform 0.5s ease-in-out; /* Adiciona transição suave */
-    z-index: -1;
+    z-index: -1; /* Mantém o menu atrás do cabeçalho */
 }
 
+/* Quando o menu está aberto */
 .nav_links.open {
     transform: translateY(0); /* Move para a posição visível */
-    z-index: 10; /* Certifique-se de que o menu está acima dos outros conteúdos */
+    z-index: 10; /* Certifica-se de que o menu está acima dos outros conteúdos */
 }
 
-
+/* Estilo dos links no menu */
 .nav_links a {
     font-weight: 600;
     color: var(--white);
     white-space: nowrap;
 }
 
+/* Efeito hover nos links do menu */
 .nav_links a:hover {
     color: var(--text-dark);
 }
 
+/* Botões adicionais dentro do nav (ocultos por padrão) */
 .nav_btns {
     display: none;
 }
 
+/* Estilo do cabeçalho principal */
 header {
     margin-top: 5rem;
     padding-inline: 1rem;
@@ -157,6 +174,7 @@ header {
     overflow: hidden;
 }
 
+/* Estilo do fundo do cabeçalho */
 header::before {
     position: absolute;
     content: "";
@@ -173,15 +191,14 @@ header::before {
     z-index: -1;
 }
 
+/* Grid layout para o conteúdo do cabeçalho */
 .header_container {
     display: grid;
 }
 
+/* Estilo para o conteúdo textual do cabeçalho */
 .header_content {
     padding: 4rem;
-}
-
-.header_content {
     margin-bottom: 5px;
     font-size: 1rem;
     font-weight: 600;
@@ -189,6 +206,7 @@ header::before {
     text-align: center;
 }
 
+/* Estilo do título no cabeçalho */
 .header_content h1 {
     margin-bottom: 2rem;
     font-size: 4.5rem;
@@ -198,6 +216,7 @@ header::before {
     text-align: center;
 }
 
+/* Estilo dos botões no cabeçalho */
 .header_btns {
     display: flex;
     align-items: center;
@@ -209,7 +228,7 @@ header::before {
     padding: 1rem 2rem;
 }
 
-.header_btns a{
+.header_btns a {
     padding: 9px 13px;
     font-size: 1.5rem;
     color: var(--primary-color);
@@ -217,12 +236,16 @@ header::before {
     border-radius: 100%;
 }
 
-.header_btns a:hover{
+/* Efeito hover para os botões do cabeçalho */
+.header_btns a:hover {
     color: var(--white);
     background-color: var(--primary-color);
 }
-@media (width > 768px){
-    nav{
+
+/* Estilos responsivos para telas maiores que 768px */
+@media (min-width: 768px) {
+    /* Ajustes para o nav em telas maiores */
+    nav {
         position: static;
         padding: 2rem 1rem;
         max-width: var(--max-width);
@@ -233,17 +256,17 @@ header::before {
         gap: 2rem;
     }
 
-    .nav_header{
+    .nav_header {
         flex: 1;
         padding: 0;
-        background-color:transparent;
+        background-color: transparent;
     }
 
-    .nav_logo .logo{
+    .nav_logo .logo {
         color: var(--text-dark);
     }
 
-    .nav_links{
+    .nav_links {
         position: static;
         width: fit-content;
         padding: 0;
@@ -256,7 +279,7 @@ header::before {
         color: var(--text-dark);
     }
 
-    .nav_links a:hover{
+    .nav_links a:hover {
         color: var(--primary-color);
     }
 
@@ -271,23 +294,24 @@ header::before {
     }
 
     .nav_btns .btn {
-        padding: .75rem 2rem;
+        padding: 0.75rem 2rem;
         background-color: var(--text-dark);
     }
 
+    /* Ajustes para o cabeçalho em telas maiores */
     header {
         margin-top: 0;
     }
 
     .header_container {
         grid-template-columns:
-        minmax(0, 1fr)
-        repeat(5, minmax(0, calc(var(--max-width) / 5)))
-        minmax(0, 1fr);
+            minmax(0, 1fr)
+            repeat(5, minmax(0, calc(var(--max-width) / 5)))
+            minmax(0, 1fr);
     }
 
     .header_content {
-        grid-column:2/4;
+        grid-column: 2/4;
         padding-block: 8rem;
     }
 
