@@ -124,13 +124,16 @@ nav {
     flex-direction: column;
     gap: 2rem;
     background-color: var(--primary-color);
-    transition: transform 0.5;
+    transform: translateY(100%); /* Começa fora da tela */
+    transition: transform 0.5s ease-in-out; /* Adiciona transição suave */
     z-index: -1;
 }
 
 .nav_links.open {
-    transform: translateY(100%);
+    transform: translateY(0); /* Move para a posição visível */
+    z-index: 10; /* Certifique-se de que o menu está acima dos outros conteúdos */
 }
+
 
 .nav_links a {
     font-weight: 600;
