@@ -4,8 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
         origin: 'right',
         distance: '50px',
         duration: 1000,
-        // Adicione `reset: true` se quiser que a animação se repita quando o elemento entrar e sair da tela
-        reset: true
+        reset: true  // Adiciona a opção para reiniciar a animação ao entrar e sair da viewport
     });
 
     // Código para o menu de navegação
