@@ -1,26 +1,31 @@
-const menuBtn = document.getElementById("menu-btn");
-const navLinks = document.getElementById("nav-links");
-const menuBtnIcon = menuBtn.querySelector("i");
+document.addEventListener('DOMContentLoaded', () => {
+    // Inicialize o ScrollReveal
+    ScrollReveal().reveal('.header_image img', {
+        origin: 'right',
+        distance: '50px',
+        duration: 1000,
+    });
 
-menuBtn.addEventListener("click", (e) => {
-    navLinks.classList.toggle("open");
+    // Código para o menu de navegação
+    const menuBtn = document.getElementById("menu-btn");
+    const navLinks = document.getElementById("nav-links");
+    const menuBtnIcon = menuBtn.querySelector("i");
 
-    const isOpen = navLinks.classList.contains("open");
-    menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
-});
+    menuBtn.addEventListener("click", () => {
+        // Alterna a classe 'open' para mostrar ou esconder o menu
+        navLinks.classList.toggle("open");
 
-navLinks.addEventListener("click", (e) => {
-    navLinks.classList.remove("open");
-    menuBtnIcon.setAttribute("class", "ri-menu-line");
-});
+        // Atualiza o ícone do botão com base no estado do menu
+        const isOpen = navLinks.classList.contains("open");
+        menuBtnIcon.setAttribute("class", isOpen ? "ri-close-line" : "ri-menu-line");
+    });
 
-const ScrollRevealOption = {
-    origin:"bottom",
-    distance:"50px",
-    duration:1000,
-};
+    // Adiciona um listener para fechar o menu ao clicar em um item do menu
+    navLinks.addEventListener("click", () => {
+        // Remove a classe 'open' para fechar o menu
+        navLinks.classList.remove("open");
 
-ScrollReveal().reveal("header_image img", {
-    ...ScrollRevealOption,
-    origin: "rigth",
+        // Atualiza o ícone do botão para o estado de menu fechado
+        menuBtnIcon.setAttribute("class", "ri-menu-line");
+    });
 });
