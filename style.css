@@ -127,7 +127,7 @@ nav {
 /* Estilo dos links do menu, começa escondido fora da tela */
 .nav_links {
     position: absolute;
-    top: 100%; /* Começa abaixo da barra de navegação */
+    top: 100%; /* Posiciona o menu logo abaixo do nav_header */
     left: 0;
     width: 100%;
     padding: 2rem;
@@ -263,7 +263,7 @@ header::before {
     }
 
     .nav_logo .logo {
-        color: var(--text-dark);
+                color: var(--text-dark);
     }
 
     .nav_links {
@@ -298,11 +298,12 @@ header::before {
         background-color: var(--text-dark);
     }
 
-    /* Ajustes para o cabeçalho em telas maiores */
+    /* Remove o espaço acima do cabeçalho em telas grandes */
     header {
         margin-top: 0;
     }
 
+    /* Grid layout para o cabeçalho com colunas específicas */
     .header_container {
         grid-template-columns:
             minmax(0, 1fr)
@@ -310,8 +311,9 @@ header::before {
             minmax(0, 1fr);
     }
 
+    /* Estilo do conteúdo do cabeçalho em telas maiores */
     .header_content {
-        grid-column: 2/4;
+        grid-column: 2 / 4;
         padding-block: 8rem;
     }
 
@@ -323,8 +325,9 @@ header::before {
         justify-content: flex-start;
     }
 
+    /* Estilo da imagem no cabeçalho */
     .header_image {
-        grid-column: 4/8;
+        grid-column: 4 / 8;
         position: relative;
         isolation: isolate;
         height: 100%;
