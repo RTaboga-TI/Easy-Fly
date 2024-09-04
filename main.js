@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
         origin: 'right',
         distance: '50px',
         duration: 1000,
+        // Adicione `reset: true` se quiser que a animação se repita quando o elemento entrar e sair da tela
+        reset: true
     });
 
     // Código para o menu de navegação
