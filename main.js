@@ -1,16 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Inicialize o ScrollReveal
-    ScrollReveal().reveal('.header_image img', {
-        origin: 'right',
-        distance: '50px',
-        duration: 1000,
-        reset: true  // Adiciona a opção para reiniciar a animação ao entrar e sair da viewport
-    });
 
     // Código para o menu de navegação
     const menuBtn = document.getElementById("menu-btn");
     const navLinks = document.getElementById("nav-links");
     const menuBtnIcon = menuBtn.querySelector("i");
+
+    const ScrollRevealOption = {
+        origin: "bottom",
+        distance: "50px",
+        duration: 1000
+    }
 
     menuBtn.addEventListener("click", () => {
         // Alterna a classe 'open' para mostrar ou esconder o menu
@@ -29,4 +28,52 @@ document.addEventListener('DOMContentLoaded', () => {
         // Atualiza o ícone do botão para o estado de menu fechado
         menuBtnIcon.setAttribute("class", "ri-menu-line");
     });
+
+    ScrollReveal().reveal('.header_image img', {
+        origin: 'right',
+        distance: '50px',
+        duration: 1000,
+        reset: true,
+    });
+
+    ScrollReveal().reveal(".header_content p", {
+        ...ScrollRevealOption,
+        delay: 500,
+    });
+    ScrollReveal().reveal(".header_content h1", {
+        ...ScrollRevealOption,
+        delay: 1000,
+    });
+    ScrollReveal().reveal(".header_btns", {
+        ...ScrollRevealOption,
+        delay: 1500,
+    });
+    ScrollReveal().reveal(".destination_card", {
+        ...ScrollRevealOption,
+        interval: 400,
+        reset: true,
+    });
+
+    ScrollReveal().reveal('.showcase_image img', {
+        origin: 'right',
+        distance: '50px',
+        duration: 1000,
+        reset: true,
+    });
+
+    ScrollReveal().reveal(".showcase_content h4", {
+        ...ScrollRevealOption,
+        delay: 500,
+    });
+    ScrollReveal().reveal(".showcase_content p", {
+        ...ScrollRevealOption,
+        delay: 1000,
+    });
+    ScrollReveal().reveal(".showcase_btn", {
+        ...ScrollRevealOption,
+        delay: 1500,
+        reset: true,
+    });
+
+
 });
