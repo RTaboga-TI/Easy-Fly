@@ -72,8 +72,20 @@ document.addEventListener('DOMContentLoaded', () => {
     ScrollReveal().reveal(".showcase_btn", {
         ...ScrollRevealOption,
         delay: 1500,
-        reset: true,
+    });
+    ScrollReveal().reveal(".banner_card", {
+        ...ScrollRevealOption,
+        delay: 500,
+    });
+    ScrollReveal().reveal(".discover_card", {
+        ...ScrollRevealOption,
+        delay: 500,
     });
 
+    const swiper = new Swiper(".swiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+    });
 
 });

@@ -487,6 +487,206 @@ header::before {
     color: var(--text-light);
 }
 
+.discover_grid {
+    margin-top: 4rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.discover_card {
+    padding: 2rem 1rem;
+    text-align: center;
+    transition: 0.3s;
+    border-radius: 1rem;
+}
+
+.discover_card:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2)
+}
+
+.discover_card span {
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 10px 15px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    background-color: rgba(40, 135, 255, 0.1);
+    border-radius: 100%;
+}
+
+.discover_card h4 {
+    max-width: 150px;
+    margin-inline: auto;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.destination_card p {
+    color: var(--text-light);
+}
+
+.swiper {
+    margin-top: 4rem;
+    width: 100%;
+}
+
+.swiper-slide {
+    min-width: 375px;
+}
+
+.client_card {
+    padding: 5px;
+    background-color: var(--extra-light);
+    border-radius: 1rem;
+    transition: 0.3s;
+}
+
+.client_card:hover {
+    background-color: var(--primary-color);
+}
+
+.client_content {
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: calc(1rem - 5px);
+}
+
+.client_rating {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.client_content p {
+    color: var(--text-dark);
+}
+
+.client_details {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.client_details img {
+    max-width: 50px;
+    border-radius: 100%;
+}
+
+.client_details h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: 0.3s;
+}
+
+.client_card:hover h4 {
+    color: var(--white);
+}
+
+.client_details h5 {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+.client_card:hover h5 {
+    color: var(--extra-light);
+}
+
+footer {
+    background-color: var(--extra-light);
+}
+
+.footer_container {
+    display: grid;
+    gap: 4rem 2rem;
+}
+
+.footer_col p {
+    max-width: 300px;
+    margin-block: 2rem;
+    color: var(--text-light);
+}
+
+.footer_socials {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer_socials a {
+    display: inline-block;
+    padding: 7px 10px;
+    font-size: 1.25rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 100%;
+}
+
+.footer_socials a:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.footer_col h4 {
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.footer_links {
+    display: grid;
+    gap: 1rem;
+}
+
+.footer_links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-light);
+}
+
+.footer_links a:hover {
+    color: var(--primary-color);
+}
+
+.footer_links a span {
+    font-size: 1.25rem;
+}
+
+.footer_col form {
+    display: grid;
+    gap: 1rem;
+}
+
+.footer_col input {
+    padding: .75rem;
+    font-size: 1rem;
+    color: var(--text-dark);
+    background-color: var(--white);
+    border: 1px solid var(--text-light);
+    border-radius: 5px;
+}
+
+.footer_col input::placeholder {
+    color: var(--text-light);
+}
+
+.footer_col .btn {
+    border-radius: 5px;
+}
+
+.footer_bar {
+    padding: 1rem;
+    font-size: .9rem;
+    color: var(--text-light);
+    text-align: center;
+}
+
 @media (min-width: 540px) {
     .destination_grid {
         grid-template-columns: repeat(2, 1fr);
@@ -500,6 +700,15 @@ header::before {
     }
     .banner_container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .discover_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer_container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .footer_col:last-child {
+        grid-area: 2/1/3/2;
     }
 }
 
@@ -597,5 +806,26 @@ header::before {
     }
     .showcase_content {
         grid-column: 2/4;
+    }
+    .banner_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .discover_grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .footer_container {
+        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    }
+    .footer_col:last-child {
+        grid-area: unset;
+    }
+}
+
+@media (width>1200px) {
+    .header_content {
+        padding-inline: 1rem 0;
+    }
+    .destination_grid {
+        gap: 2rem;
     }
 }
