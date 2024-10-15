@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<!--WIP, essa página está 100% em trabalho, muita coisa aqui não é muito funcinal--> 
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../style.css"/>
+        <title>Reservas Voo</title>
+    </head>
+    
+<body>
+        <nav>
+            <div class="nav_header">
+                <div class="nav_logo">
+                    <a href="#" class="logo">Easy Fly</a>
+                </div>
+                <div class="nav_menu_btn" id="menu-btn">
+                    <i class="ri-menu-line"></i>
+                </div>
+            </div>
+            <ul class="nav_links" id="nav-links">
+                <li><a href="#inicio">INICIO</a></li>
+                <li><a href="#sobre">SOBRE</a></li>
+                <li><a href="#pacotes">PACOTES</a></li>
+                <li><a href="#Hoteis">HOTEIS</a></li>
+                <li><a href="#">RESERVE</a></li>
+            </ul>
+        </nav>
+        <!--Seção para escolher qual pagina dentro da atual vc precisa acessar WIP-->
+        <div class="nav_intern">
+            <ul id="nav_intern">
+                <li><a href="">Viagens</a></li> <!--Pagina de Reserva default-->
+                <li><a href="">Check-In</a></li> <!--Pagina pra ver Staus de Check-in-->
+                <li><a href="">Cartão de Embarque</a></li> <!--Faço a menor ideia, os sites que eu tava vendo tinha isso aqui kkkkkkkkkkkkkkkkkk-->
+                <li><a href="">Status de Voo</a></li> <!--Essa parte não sei se vai ficar no projeto final. Vai depender muito do que eu vou conseguir fazer com o BackEnd-->
+            </ul>
+        </div>
+    <div>
+        <form>
+            <input type="text" list="city_" placeholder="Cidade de Origem">
+            <input type="submit">
+            <input type="text" list="contry_" placeholder="Pais de origem">
+            <input type="submit">
+            <input type="text" list="city_" placeholder="Cidade de destino">
+            <input type="submit">
+            <input type="text" list="contry_" placeholder="País de destino">
+            <input type="submit">
+            <input type="number" placeholder="quantidade de pessoas">
+            <input type="submit">
+            <input type="radio" name="Viagemtrabalho" value="Estou viajando a trabalho">
+            <label for="Viagemtrabalho">Estou viajando a trabalho</label>
+            
+        </form>    
+    </div>
+    <div class="calendario">
+        <ul class="semana">
+            <form action=""><!--espaço pro PHP-->
+              <label for="data">Data de partida:</label>
+              <input type="date" id="ida" name="ida">
+              <input type="submit">
+            </form>
+         </ul>
+    </div>
+    <div class="calendario">
+        <ul class="semana">
+            <form action="/action_page.php">
+              <label for="data">Data de volta:</label>
+              <input type="date" id="volta" name="volta">
+              <input type="submit">
+            </form>
+         </ul>
+         <!--Seção copiada da home para manter a padronização-->
+    </div>
+    <section class="section_container client_container">
+        <h2 class="section_header">Amado por mais de mil viajantes</h2>
+        <p class="section_description">
+            Descubra as histórias de desejo de viajar e memórias queridas através dos olhos de nossos valiosos clientes.
+        </p>
+        <!-- Slider main container -->
+        <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <div class="client_card">
+                        <div class="client_content">
+                            <div class="client_rating">
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                            </div>
+                            <p>
+                                EZ FLY transformou completamente minha experiência de viagem. Desde encontrar perolas escondidas em cidades movimentadas até descobrir retiros serenos fora dos roteiros mais conhecidos, cada detalhe foi organizado. Não posso recomendar o EZ Fly o suficiente
+                                para que alguém eleve sua experiência de viagem.
+                            </p>
+                        </div>
+                        <div class="client_details">
+                            <img src="assets/client-1.jpg" alt="client">
+                            <div>
+                                <h4>Pedro Augusto</h4>
+                                <h5>Bloguiero de Viagem</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="client_card">
+                        <div class="client_content">
+                            <div class="client_rating">
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                            </div>
+                            <p>
+                                Minha recente aventura com Ez Fly foi espetacular. Os itinerários personalizados e as recomendações que me forneceram levaram-me a locais extraordinários que nunca teria encontrado sozinho. Já estou planejando minha próxima aventura com eles.
+                            </p>
+                        </div>
+                        <div class="client_details">
+                            <img src="assets/client-2.jpg" alt="client">
+                            <div>
+                                <h4>Evelyn Silveira</h4>
+                                <h5>Entusiasta </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="client_card">
+                        <div class="client_content">
+                            <div class="client_rating">
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                            </div>
+                            <p>
+                                Ez Fly ofereceu uma experiência transformadora para minha pesquisa sobre marcos históricos. As perspectivas aéreas únicas proporcionaram um novo nível de apreciação e visão dos locais que estudei. Eu recomendo fortemente seus serviços a colegas historiadores
+                                e entusiastas culturais.
+                            </p>
+                        </div>
+                        <div class="client_details">
+                            <img src="assets/client-3.jpg" alt="client">
+                            <div>
+                                <h4>Emili Camargo</h4>
+                                <h5>Historiadora</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="client_card">
+                        <div class="client_content">
+                            <div class="client_rating">
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                                <span><i class="ri-star-s-fill"></i></span>
+                            </div>
+                            <p>
+                                Encontrar um equilíbrio entre trabalho e viagens pode ser um desafio. Mas a Ez Fly facilitou tudo, seu planejamento eficiente e excelentes recomendações me ajudaram a maximizar meu tempo de inatividade e aproveitar cada momento da minha viagem. Estou
+                                ansioso para trabalhar com eles novamente em viagens futuras.
+                            </p>
+                        </div>
+                        <div class="client_details">
+                            <img src="assets/client-4.jpg" alt="client">
+                            <div>
+                                <h4>Davi Martins</h4>
+                                <h5>Empresario</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="section_container footer_container">
+            <div class="footer_col">
+                <div class="footer_logo">
+                    <a href="#" class="logo">Easy Fly</a>
+                </div>
+                <p>
+                    Explore o mundo com facilidade e entusiasmo por meio de nossa abrangente plataforma de viagens. Sua jornada começa aqui. Onde o planejamento perfeito encontra experiências inesquecíveis
+                </p>
+                <ul class="footer_socials">
+                    <li>
+                        <a href="#"><i class="ri-facebook-fill"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-instagram-line"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="ri-youtube-fill"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Links</h4>
+                <ul class="footer_links">
+                    <li><a href="#">INICIO</a></li>
+                    <li><a href="#">SOBRE</a></li>
+                    <li><a href="#">VIAGENS</a></li>
+                    <li><a href="#">PACOTES</a></li>
+                    <li><a href="#">HOTEIS</a></li>
+                    <li><a href="#">RESERVE</a></li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Contate-nos</h4>
+                <ul class="footer_links">
+                    <li>
+                        <a href="#">
+                            <span><i class="ri-phone-fill"></i></span> (19) 94930-0523
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="ri-record-mail-line"></i></span> Info@Easy-Fly.com.br
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span><i class="ri-map-pin-2-fill"></i></span> Campinas, São Paulo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer_col">
+                <h4>Se inscreva</h4>
+                <form action="/">
+                    <input type="text" placeholder="Digite Seu Email" />
+                    <button class="btn">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+
+</html>
+    
+<!--eu não faço ideia se tem algo que faça isso aqui ficar mais bonito -->
+
