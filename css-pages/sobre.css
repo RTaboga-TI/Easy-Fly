@@ -296,6 +296,106 @@ header::before {
     border-radius: 100%;
 }
 
+
+/* Efeito hover para os botões do cabeçalho */
+
+.header_btns a:hover {
+    color: var(--white);
+    background-color: var(--primary-color);
+}
+
+
+/* Estilo para o contêiner dos cards */
+
+.cards_container {
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem;
+}
+
+
+/* Alinhamento horizontal em telas maiores */
+
+@media (min-width: 768px) {
+    .cards_container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* Estilo individual dos cards */
+
+.card {
+    background-color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+/* Estilo para a imagem do card */
+
+.card img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+}
+
+
+/* Estilo para o título e subtítulo */
+
+.card h1 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin: 1rem 0 0.5rem;
+}
+
+.title {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+
+/* Botão de contato */
+
+.card button {
+    border: none;
+    padding: 0.75rem;
+    width: 100%;
+    font-size: 1rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card button:hover {
+    opacity: 0.8;
+}
+
+
+/* Links sociais */
+
+.social_links {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
+.social_links a {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social_links a:hover {
+    color: var(--text-dark);
+}
+
 footer {
     background-color: var(--extra-light);
 }
