@@ -8,5 +8,4 @@ export const getReserva = (_, res) => { //get da querry
         
         return res.status(200).json(data); //retorno de falha
     });
-
 }
