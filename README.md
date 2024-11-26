@@ -37,7 +37,3 @@ Para visualizar e editar o projeto, você precisará de:
 - Implementar funcionalidades adicionais para interatividade.
 - Melhorar o design responsivo.
 - Adicionar uma documentação detalhada para cada funcionalidade.
-
-## 🧑‍💻 Contribuições
-
-Sinta-se à vontade para contribuir com o projeto. Basta realizar um *fork*, criar uma *branch* e abrir um *pull request*.
