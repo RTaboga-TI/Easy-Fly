@@ -1,14 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../style.css" />
-    <title>Reservas Voo</title>
+    <title>Reserva Voos</title>
 </head>
 
 <body>
+<style>
+    .nav{
+        background-color: blue;
+    }
+
+</style>
+    <!-- Nav Content -->
     <nav>
         <div class="nav_header">
             <div class="nav_logo">
@@ -19,23 +28,34 @@
             </div>
         </div>
         <ul class="nav_links" id="nav-links">
-            <li><a href="#inicio">INICIO</a></li>
-            <li><a href="#sobre">SOBRE</a></li>
+            <li><a href="../index.html">INICIO</a></li>
+            <li><a href="./Sobre.html">SOBRE</a></li>
+            <li><a href="./Destinos.html">VIAGENS</a></li>
+            <li>
+                <a href="#"></a>
+            </li>
         </ul>
+        <div class="nav_btns">
+            <button class="btn">LOGIN</button>
+        </div>
     </nav>
-    <div>
-        <button href="#" , name="Viagem">
-    </div>
+
 
     <div>
-        <form>
-            <input type="text" list="saidas" placeholder="Cidade de Origem">
+        <form class = form>
+            <input type="text" id="list" placeholder="Cidade de Origem">
             <input type="submit">
-            <input type="text" list="chegada" placeholder="Cidade de destino">
+            <input type="text" id="list" placeholder="Cidade de destino">
             <input type="submit">
             <input type="number" placeholder="quantidade de pessoas">
             <input type="submit">
-
+            <datalist id="list">
+                <option value="Chocolate"></option>
+                <option value="Coconut"></option>
+                <option value="Mint"></option>
+                <option value="Strawberry"></option>
+                <option value="Vanilla"></option>
+              </datalist>
         </form>
     </div>
     <div class="calendario">
