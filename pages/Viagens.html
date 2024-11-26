@@ -7,16 +7,12 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="../style.css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <title>Reserva Voos</title>
 </head>
 
 <body>
-<style>
-    .nav{
-        background-color: blue;
-    }
-
-</style>
     <!-- Nav Content -->
     <nav>
         <div class="nav_header">
@@ -35,38 +31,48 @@
                 <a href="#"></a>
             </li>
         </ul>
-        <div class="nav_btns">
-            <button class="btn">LOGIN</button>
-        </div>
     </nav>
 
-
-    <div>
-        <form class = form ref="{ref}">
-            <input type="text" list="" placeholder="Cidade de Origem">
-            <input type="text" list="" placeholder="Cidade de destino">
-            <input type="number" placeholder="quantidade de pessoas">
-            <input type="submit">
-    </div>
-    <div class="calendario">
-        <ul class="semana">
-            <form action="">
-                <label for="data">Data de partida:</label>
-                <input type="date" id="ida" name="ida">
-                <input type="submit">
+    <div class="container">
+        <div class="headercrud">
+          <span>Reservas</span>
+          <button onclick="openModal()" id="new">Incluir</i></button>
+        </div>
+    
+        <div class="divTable">
+          <table>
+            <thead>
+              <tr>
+                <th>Saida</th>
+                <th>Chegada</th>
+                <th>Data</th>
+                <th class="acao">Editar</th>
+                <th class="acao">Excluir</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        </div>
+    
+        <div class="modal-container">
+          <div class="modal">
+            <form>
+              <label for="m-saida">Saida</label>
+              <input id="m-saida" type="text" required />
+      
+              <label for="m-chegada">Chegada</label>
+              <input id="m-chegada" type="text" required />
+      
+              <label for="m-data">Data</label>
+              <input id="m-data" type="date" required />
+              <button id="btnSalvar">Salvar</button>
             </form>
-        </ul>
-    </div>
-    <div class="calendario">
-        <ul class="semana">
-            <form action="">
-                <label for="data">Data de volta:</label>
-                <input type="date" id="volta" name="volta">
-                <input type="submit">
-            </form>
-        </ul>
+          </div>
+        </div>
+        <script src="../Backend/script.js"></script>
         <!--Seção copiada da home para manter a padronização-->
-    </div>
+   
     <section class="section_container client_container">
         <h2 class="section_header">Amado por mais de mil viajantes</h2>
         <p class="section_description">
